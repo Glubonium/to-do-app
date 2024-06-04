@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планувальник задач</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Планувальник задач</h1>
+        <!-- Фіксований блок введення і додавання завдань -->
+        <div class="input-container">
+            <input type="text" id="new-task" placeholder="Додати нове завдання">
+            <input type="text" id="new-category" placeholder="Додати категорію">
+            <input type="date" id="new-date">
+            <button id="add-task-btn">Додати Завдання</button>
+        </div>
+        
+        <!-- Фільтр категорій -->
+        <div class="category-filter">
+            <label for="category-filter">Фільтр категорій:</label>
+            <select id="category-filter">
+                <option value="all">Всі</option>
+            </select>
+        </div>
+
+        <!-- Адаптивна таблиця завдань -->
+        <h2>Таблиця Завдань</h2>
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Завдання</th>
+                    <th>Категорія</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+            <tbody id="task-list-table"></tbody>
+        </table>
+
+        <!-- Фіксована таблиця статистики -->
+        <h2>Статистика</h2>
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>Статистика</th>
+                    <th>Значення</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Всього завдань</td>
+                    <td id="total-tasks-table">0</td>
+                </tr>
+                <tr>
+                    <td>Виконано завдань</td>
+                    <td id="completed-tasks-table">0</td>
+                </tr>
+                <tr>
+                    <td>Відсоток виконання</td>
+                    <td id="completion-percentage-table">0%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Адаптивний Блок Завдань -->
+        <h2>Блок Завдань</h2>
+        <div class="adaptive-flex" id="task-list-flex"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

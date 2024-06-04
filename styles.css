@@ -1,0 +1,291 @@
+/* Селектори тегу */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Селектори класу */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto 20px;
+    align-items: center;
+}
+
+.category-filter {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    table-layout: fixed;
+}
+
+.done {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #155724;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.stats-table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.adaptive-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.adaptive-flex .task-item {
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.adaptive-flex .task-item .task-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.adaptive-flex .task-item .task-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.adaptive-flex .task-item .task-buttons button {
+    flex: 1;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 14px;
+    color: white;
+}
+
+.adaptive-flex .task-item .task-buttons .done-btn {
+    background: green;
+}
+
+.done-btn, .remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.done-btn {
+    background: green;
+}
+
+/* Селектори ідентифікаторів */
+#new-task, #new-category, #new-date {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+}
+
+#new-task:focus, #new-category:focus, #new-date:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#add-task-btn {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+/* Інші, змішані селектори */
+#add-task-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.category-filter label {
+    font-size: 16px;
+    color: #333;
+}
+
+.category-filter select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    max-width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.category-filter select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.task-table th, .task-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.task-table th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.task-table td:last-child {
+    min-width: 40%;
+}
+
+.task-table .button-container {
+    display: flex;
+    gap: 10px;
+}
+
+.stats-table th, .stats-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.stats-table th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.done-btn:hover, .remove-btn:hover {
+    transform: translateY(-2px);
+}
+
+.done-btn:hover {
+    background: darkgreen;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
+.adaptive-flex .task-item .task-info span {
+    flex: 1;
+    margin-bottom: 5px;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.adaptive-flex .task-item .task-buttons .done-btn:hover {
+    background: darkgreen;
+}
+
+.adaptive-flex .task-item .task-buttons .remove-btn {
+    background: red;
+}
+
+.adaptive-flex .task-item .task-buttons .remove-btn:hover {
+    background: darkred;
+}
+
+/* Медіа запроси для гнучкої стилізації */
+
+/* Десктоп */
+@media (min-width: 1200px) {
+    .task-table th, .stats-table th {
+        background-color: #8175d3;
+    }
+}
+
+/* Планшет */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .task-table th, .stats-table th {
+        background-color: #ccffcc;
+    }
+    .adaptive-flex .task-item {
+        width: calc(50% - 10px);
+    }
+}
+
+/* Мобільна */
+@media (min-width: 375px) and (max-width: 767px) {
+    .task-table th, .stats-table th {
+        background-color: #07077a;
+    }
+    .adaptive-flex .task-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 374px) {
+    .task-table th, .stats-table th {
+        background-color: #ccccff;
+    }
+    .adaptive-flex .task-item {
+        width: 100%;
+    }
+}
